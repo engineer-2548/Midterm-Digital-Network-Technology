@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เฉลยตัวอย่างข้อสอบกลางภาค: Digital Network Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sarabun', 'Inter', sans-serif;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-button.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        .source-ref {
+            background-color: #f3f4f6;
+            border-left: 4px solid #4b5563;
+            padding: 12px;
+            margin-top: 16px;
+            font-style: italic;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">เฉลยตัวอย่างข้อสอบกลางภาค</h1>
+            <p class="text-lg text-gray-600 mt-2">วิชา: 070315104 Digital Network Technology</p>
+        </header>
+
+        <div id="accordion-container" class="space-y-4">
+
+            <!-- Question 1 -->
+            <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 1) ความเข้าใจเรื่อง Physical Layer</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold mb-2">1.1 ปัจจัยที่ทำให้ข้อมูลผิดพลาดใน Physical Layer</h3>
+                    <p><strong>Bit Error Rate (BER)</strong> คือ อัตราส่วนของจำนวนบิตที่ผิดพลาดต่อจำนวนบิตทั้งหมดที่ส่งไป ปัจจัยหลักที่ทำให้เกิดข้อผิดพลาดมี 2 ประการคือ:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>การลดทอนของสัญญาณ (Signal Attenuation):</strong> เมื่อสัญญาณเดินทางผ่านตัวกลาง พลังงานจะลดลงตามระยะทาง หากสัญญาณอ่อนเกินไป อุปกรณ์ฝั่งรับอาจไม่สามารถแยกแยะระหว่างบิต 0 และ 1 ได้ถูกต้อง</li>
+                        <li><strong>สัญญาณรบกวน (Noise/Interference):</strong> สัญญาณที่ไม่พึงประสงค์ เช่น คลื่นแม่เหล็กไฟฟ้าจากอุปกรณ์อื่น (EMI) สามารถเข้ามาปะปนและเปลี่ยนแปลงรูปร่างของสัญญาณข้อมูล ทำให้ฝั่งรับตีความค่าบิตผิดไป</li>
+                    </ul>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">1.2 การวิเคราะห์ประสิทธิภาพของเทคนิคโมดูเลชัน</h3>
+                    <div class="my-4 text-center">
+                        <img src="https://storage.googleapis.com/gemini-prod/images/3d749508-3d84-4841-862d-a192e212f718" alt="กราฟแสดง Bit Error Rate ของเทคนิคโมดูเลชันต่างๆ" class="mx-auto rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Chart+Not+Available';">
+                    </div>
+                    <p><strong>1.2.1 โมดูเลชันที่เกิดความผิดพลาดน้อยที่สุด:</strong></p>
+                    <p><strong>BPSK, QPSK, และ 4-QAM</strong> เกิดความผิดพลาดน้อยที่สุด เนื่องจากเส้นกราฟของเทคนิคเหล่านี้อยู่ต่ำที่สุด ซึ่งหมายความว่าที่ระดับ Eb/N0 เท่ากัน จะมีโอกาสเกิดข้อผิดพลาดของบิต (BER) น้อยที่สุด</p>
+                    <p class="mt-2"><strong>1.2.2 การเลือกใช้โมดูเลชันในสภาวะสัญญาณรบกวนต่ำ:</strong></p>
+                    <p>จะเลือกใช้ <strong>64-QAM</strong> เพราะในสภาวะที่สัญญาณรบกวนต่ำมาก (High Eb/N0) ควรเลือกเทคนิคที่ให้อัตราการส่งข้อมูล (Data Rate) สูงที่สุด ซึ่ง 64-QAM เป็นเทคนิคที่มีความซับซ้อนสูงและส่งข้อมูลได้หลายบิตต่อหนึ่งสัญลักษณ์ (symbol)</p>
+                    <p class="mt-2"><strong>1.2.3 การเลือกใช้โมดูเลชันตามเงื่อนไขที่กำหนด:</strong></p>
+                    <p>จะเลือกใช้ <strong>16-QAM</strong> หรือ <strong>8-PSK</strong> ตามขั้นตอนการพิจารณา ดังนี้:</p>
+                    <ol class="list-decimal list-inside mt-2 space-y-1">
+                        <li><strong>แปลงค่า SNR:</strong> ความแตกต่างของสัญญาณ 10 เท่า คือ Eb/N0 = 10 ซึ่งเท่ากับ 10 dB.</li>
+                        <li><strong>หาค่า BER บนกราฟ:</strong> Error ต่ำกว่า 10⁻⁴ หมายถึงค่าบนแกน Y `log10(Pb)` ต้องน้อยกว่า -4.</li>
+                        <li><strong>พิจารณาจากกราฟ:</strong> ที่แกน X = 10 dB เราหาเส้นกราฟที่อยู่ต่ำกว่าแกน Y = -4 ซึ่ง 16-QAM หรือ 8-PSK เป็นทางเลือกที่ดี เพราะให้ประสิทธิภาพการส่งข้อมูลที่ดีในขณะที่ยังรักษาอัตราความผิดพลาดได้ตามเกณฑ์</li>
+                    </ol>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">1.3 เหตุผลที่ 802.11ac เร็วกว่า 802.11n</h3>
+                    <p>802.11ac มีอัตราเร็วสูงกว่า 802.11n อย่างมีนัยสำคัญเนื่องจากปัจจัยหลัก 3 ประการ:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>Channel Bandwidth ที่กว้างขึ้น:</strong> 802.11ac รองรับความกว้างช่องสัญญาณที่ 80 MHz และ 160 MHz ซึ่งกว้างกว่า 802.11n (สูงสุด 40 MHz) ทำให้ส่งข้อมูลได้มากขึ้นในเวลาเดียวกัน</li>
+                        <li><strong>จำนวน Spatial Streams ที่มากขึ้น:</strong> 802.11ac รองรับได้สูงสุด 8 สตรีม (เทียบกับ 4 สตรีมของ 802.11n) ทำให้ส่งข้อมูลแบบขนานได้มากขึ้น</li>
+                        <li><strong>เทคนิค Modulation ที่ซับซ้อนขึ้น:</strong> 802.11ac ใช้ <strong>256 QAM</strong> (เข้ารหัส 8 บิต/สัญลักษณ์) ในขณะที่ 802.11n ใช้ <strong>64 QAM</strong> (เข้ารหัส 6 บิต/สัญลักษณ์) ทำให้ส่งข้อมูลต่อสัญลักษณ์ได้มากขึ้น</li>
+                    </ul>
+                    <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Computer Networking: A Top-Down Approach, 7th Edition</em>, Section 1.2.2; <em>Wk1-OSI-PHY-DataLink.pdf</em>, หน้า 29, 36.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 2) การทำงานของ ARP และ ARP Poisoning</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <div class="my-4 text-center">
+                         <img src="https://storage.googleapis.com/gemini-prod/images/4214fe96-c67d-419b-b054-d84869818818" alt="ไดอะแกรมเครือข่ายสำหรับคำถามข้อ 2" class="mx-auto rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x150/E2E8F0/4A5568?text=Network+Diagram';">
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">2.1 ARP Table ของแต่ละ Host</h3>
+                    <p><strong>Host A (10.0.0.11/24):</strong> อยู่ในเครือข่าย 10.0.0.0/24 จะส่ง ARP request โดยตรงหา Host B (subnet เดียวกัน) และส่งไปที่ Gateway (10.0.0.99) เพื่อไปหา Host D (คนละ subnet)</p>
+                    <table class="w-full mt-2 border-collapse border border-gray-300">
+                        <thead><tr class="bg-gray-100"><th class="p-2 border">IP Address</th><th class="p-2 border">Physical Address</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-2 border"><code>10.0.0.22</code></td><td class="p-2 border"><code>0053.ffff.bbbb</code></td></tr>
+                            <tr><td class="p-2 border"><code>10.0.0.99</code></td><td class="p-2 border"><code>0053.ffff.9999</code></td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-4"><strong>Host B (10.0.0.22/16):</strong> มีการตั้งค่า Subnet Mask ผิด (/16) ทำให้มองว่า Host A และ D อยู่ในเครือข่ายเดียวกัน จะส่ง ARP request โดยตรงหา Host A และจะได้รับ MAC ของ Gateway (10.0.0.99) สำหรับ Host D ผ่าน Proxy ARP</p>
+                    <table class="w-full mt-2 border-collapse border border-gray-300">
+                         <thead><tr class="bg-gray-100"><th class="p-2 border">IP Address</th><th class="p-2 border">Physical Address</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-2 border"><code>10.0.0.11</code></td><td class="p-2 border"><code>0053.ffff.aaaa</code></td></tr>
+                            <tr><td class="p-2 border"><code>10.0.4.44</code></td><td class="p-2 border"><code>0053.ffff.9999</code> (Proxy ARP)</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-4"><strong>Host D (10.0.4.44/24):</strong> อยู่ในเครือข่าย 10.0.4.0/24 จะส่งข้อมูลไปหา Host A และ B (คนละ subnet) ผ่าน Gateway ของตัวเอง (10.0.4.99)</p>
+                     <table class="w-full mt-2 border-collapse border border-gray-300">
+                         <thead><tr class="bg-gray-100"><th class="p-2 border">IP Address</th><th class="p-2 border">Physical Address</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-2 border"><code>10.0.4.99</code></td><td class="p-2 border"><code>0053.ff44.9999</code></td></tr>
+                        </tbody>
+                    </table>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">2.2 การโจมตีด้วย ARP Poisoning</h3>
+                    <p>เพื่อเบี่ยงเบนเส้นทางจาก Host A ไปยัง Host D ให้มาที่ Host C แทน ผู้โจมตี (Host C) จะต้องหลอก Host A ว่าตนเองคือ Default Gateway โดยมีขั้นตอนดังนี้:</p>
+                    <ol class="list-decimal list-inside mt-2 space-y-1">
+                        <li><strong>สร้าง ARP Reply ปลอม:</strong> Host C สร้าง ARP Reply Packet ที่แอบอ้างว่าตนเองคือ Gateway โดยระบุ:
+                            <ul class="list-disc list-inside ml-4">
+                                <li><strong>Sender IP Address:</strong> <code>10.0.0.99</code> (IP ของ Gateway)</li>
+                                <li><strong>Sender MAC Address:</strong> <code>0053.ffff.cccc</code> (MAC ของ Host C)</li>
+                            </ul>
+                        </li>
+                        <li><strong>ส่ง Packet ปลอม:</strong> Host C ส่ง ARP Reply ปลอมนี้ไปยัง Host A.</li>
+                        <li><strong>อัปเดต ARP Cache ของเป้าหมาย:</strong> Host A ได้รับ Packet และอัปเดต ARP Cache ของตัวเอง ทำให้รายการของ IP <code>10.0.0.99</code> ถูกจับคู่กับ MAC ของ Host C.</li>
+                        <li><strong>เบี่ยงเบนการส่งข้อมูล:</strong> หลังจากนี้ เมื่อ Host A ต้องการส่งข้อมูลไปหา Host D มันจะสร้าง Ethernet frame ที่มี Destination MAC Address เป็นของ Host C ทำให้ข้อมูลทั้งหมดถูกส่งไปยัง Host C แทนที่จะเป็น Gateway จริง</li>
+                    </ol>
+                    <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Wk1-OSI-PHY-DataLink.pdf</em>, หน้า 42-55 (เรื่อง ARP และ Vulnerabilities of ARP).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+             <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 3) หน้าที่ของ Medium Access Control (MAC) Protocol</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <p><strong>Medium Access Control (MAC) Protocol</strong> เป็นโปรโตคอลย่อยในระดับ Data Link Layer มีหน้าที่หลักในการ <strong>ควบคุมและประสานงานการเข้าใช้ตัวกลาง (Shared Medium) ในการส่งข้อมูล</strong> สำหรับเครือข่ายที่มีอุปกรณ์หลายตัวเชื่อมต่ออยู่บนช่องสัญญาณเดียวกัน (Broadcast Channel) เช่น เครือข่าย Wi-Fi หรือเครือข่าย Ethernet แบบบัสในสมัยก่อน</p>
+                    <p class="mt-2">หน้าที่สำคัญคือการแก้ปัญหา <strong>"การชนกันของข้อมูล (Collision)"</strong> ซึ่งเกิดขึ้นเมื่อมีอุปกรณ์มากกว่าหนึ่งตัวพยายามส่งข้อมูลพร้อมกันบนตัวกลางที่ใช้ร่วมกัน MAC Protocol จะกำหนดกฎเกณฑ์ว่า "ใครสามารถส่งข้อมูลได้ และจะส่งได้เมื่อไหร่" เพื่อลดการชนกันของข้อมูลและทำให้การใช้ช่องสัญญาณมีประสิทธิภาพสูงสุด</p>
+                     <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Wk2-MAC for LAN.pdf</em>, หน้า 2-3.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 4) ข้อดีและข้อเสียของ FDM และ TDM</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <p><strong>FDM (Frequency Division Multiplexing)</strong> และ <strong>TDM (Time Division Multiplexing)</strong> เป็นเทคนิคในกลุ่ม Channel Partitioning ซึ่งมีข้อดีและข้อเสียที่คล้ายคลึงกันดังนี้:</p>
+                    <h3 class="text-lg font-semibold mt-4 mb-2">ข้อดี (Advantages)</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>ไม่มีการชนกันของข้อมูล (No Collisions):</strong> ทั้งสองเทคนิคแบ่งช่องสัญญาณออกเป็นส่วนย่อยๆ ที่ไม่ทับซ้อนกัน (FDM แบ่งตามความถี่, TDM แบ่งตามเวลา) และจัดสรรให้แต่ละผู้ใช้โดยเฉพาะ ทำให้ไม่มีโอกาสที่ข้อมูลจะชนกัน</li>
+                        <li><strong>ประสิทธิภาพที่คาดการณ์ได้และยุติธรรม (Predictable & Fair):</strong> ผู้ใช้แต่ละรายจะได้รับการรับประกันว่าจะได้ใช้ทรัพยากรส่วนของตนเอง (R/N) อย่างแน่นอน ทำให้ประสิทธิภาพคงที่และคาดการณ์ได้ง่าย</li>
+                    </ul>
+                    <h3 class="text-lg font-semibold mt-4 mb-2">ข้อเสีย (Disadvantages)</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>การใช้ทรัพยากรไม่มีประสิทธิภาพ (Inefficient):</strong> ทรัพยากรจะถูกจองไว้ให้ผู้ใช้แต่ละรายเป็นการถาวร แม้ว่าผู้ใช้จะไม่มีข้อมูลส่งในขณะนั้นก็ตาม ทำให้ทรัพยากรส่วนนั้นสูญเปล่าไป</li>
+                        <li><strong>อัตราการส่งข้อมูลสูงสุดถูกจำกัด (Limited Peak Rate):</strong> ผู้ใช้ไม่สามารถส่งข้อมูลได้เร็วกว่าส่วนที่ตนเองได้รับจัดสรร (R/N) แม้ว่าจะเป็นผู้ใช้เพียงรายเดียวที่กำลังใช้งานช่องสัญญาณอยู่ก็ตาม</li>
+                    </ul>
+                    <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Wk2-MAC for LAN.pdf</em>, หน้า 5, 10; <em>Computer Networking: A Top-Down Approach, 7th Edition</em>, Section 6.3.1.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 5) ความแตกต่างระหว่าง Parity bit และ CRC</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <p><strong>Parity bit</strong> และ <strong>CRC (Cyclic Redundancy Check)</strong> เป็นเทคนิคการตรวจจับข้อผิดพลาด (Error Detection) แต่มีความแตกต่างกันในด้านกลไก ประสิทธิภาพ และความซับซ้อน ดังนี้:</p>
+                    <div class="overflow-x-auto mt-4">
+                        <table class="w-full border-collapse border border-gray-300">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border">คุณลักษณะ</th>
+                                    <th class="p-2 border">Parity Bit</th>
+                                    <th class="p-2 border">CRC (Cyclic Redundancy Check)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border font-semibold">กลไกการทำงาน</td>
+                                    <td class="p-2 border">เพิ่ม 1 บิตเข้าไปในกลุ่มข้อมูล เพื่อทำให้จำนวนบิต '1' ทั้งหมดเป็นเลขคู่ (Even Parity) หรือเลขคี่ (Odd Parity)</td>
+                                    <td class="p-2 border">มองข้อมูลเป็นพหุนาม (Polynomial) และนำไปหารด้วยพหุนามตัวสร้าง (Generator Polynomial) เศษที่ได้คือ <strong>Frame Check Sequence (FCS)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 border font-semibold">ความสามารถในการตรวจจับ</td>
+                                    <td class="p-2 border"><strong>ต่ำ:</strong> ตรวจจับได้เฉพาะเมื่อมีจำนวนบิตผิดพลาดเป็น <strong>เลขคี่</strong> เท่านั้น</td>
+                                    <td class="p-2 border"><strong>สูงมาก:</strong> ตรวจจับข้อผิดพลาดได้หลากหลายรูปแบบ รวมถึง <strong>Burst Errors</strong> (ข้อผิดพลาดต่อเนื่องหลายบิต) ได้อย่างมีประสิทธิภาพ</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 border font-semibold">Overhead</td>
+                                    <td class="p-2 border"><strong>ต่ำมาก:</strong> 1 บิตต่อกลุ่มข้อมูล</td>
+                                    <td class="p-2 border"><strong>สูงกว่า:</strong> FCS มักมีขนาด 16 หรือ 32 บิต</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 border font-semibold">ความซับซ้อน</td>
+                                    <td class="p-2 border">คำนวณง่ายและรวดเร็วมาก</td>
+                                    <td class="p-2 border">การคำนวณซับซ้อนกว่า มักจะถูกนำไปใช้งานในระดับฮาร์ดแวร์</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Wk1-OSI-PHY-DataLink.pdf</em>, หน้า 66-71.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 6) เหตุผลในการกำหนด Slot Time ใน CSMA/CD</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <p>ในโปรโตคอล CSMA/CD ค่า <strong>slot time</strong> ถูกกำหนดขึ้นเพื่อให้แน่ใจว่า <strong>ทุกอุปกรณ์ในเครือข่ายสามารถตรวจจับการชนกันของข้อมูล (Collision Detection) ได้อย่างแน่นอน</strong> ก่อนที่จะส่งเฟรมข้อมูลที่เล็กที่สุด (Minimum Frame Size) จนเสร็จสิ้น</p>
+                    <p class="mt-2">เหตุผลที่ต้องกำหนดให้ 1 slot time เท่ากับ 512 bit time มาจากการคำนวณในสถานการณ์ที่เลวร้ายที่สุด (Worst-case scenario) ดังนี้:</p>
+                    <ol class="list-decimal list-inside mt-2 space-y-1">
+                        <li><strong>การตรวจจับ Collision:</strong> อุปกรณ์ที่กำลังส่งข้อมูลจะรู้ว่าเกิด Collision ก็ต่อเมื่อสัญญาณของการชนเดินทางกลับมาถึงตัวเอง</li>
+                        <li><strong>Worst-Case Scenario:</strong> การชนกันที่ใช้เวลานานที่สุดในการตรวจจับ คือเมื่ออุปกรณ์สองตัวที่อยู่ปลายสุดของสายส่งข้อมูลพร้อมกันพอดี ซึ่งใช้เวลาเกือบเท่ากับ <strong>Round-trip Propagation Delay</strong> (เวลาที่สัญญาณเดินทางไป-กลับสุดปลายสาย)</li>
+                        <li><strong>เงื่อนไขสำคัญ:</strong> ดังนั้น เวลาที่ใช้ในการส่งเฟรมที่เล็กที่สุด จะต้อง <strong>มากกว่าหรือเท่ากับ</strong> Round-trip Propagation Delay เพื่อให้แน่ใจว่าผู้ส่งยังคงส่งข้อมูลอยู่เมื่อสัญญาณการชนกลับมาถึง</li>
+                        <li><strong>การคำนวณสำหรับ 10 Mbps Ethernet:</strong> ในมาตรฐาน Ethernet 10 Mbps ดั้งเดิม ได้มีการคำนวณ Round-trip delay สูงสุดไว้ที่ประมาณ <strong>51.2 ไมโครวินาที</strong> ซึ่งเป็นเวลาที่ใช้ในการส่งข้อมูล <strong>512 บิต</strong>.</li>
+                    </ol>
+                    <p class="mt-2">ดังนั้น ค่า <strong>512 bit time</strong> จึงถูกกำหนดให้เป็น <strong>1 slot time</strong> เพื่อใช้เป็นหน่วยเวลาพื้นฐานในการทำงานของอัลกอริทึม Exponential Back-off และยังเป็นตัวกำหนดขนาดเฟรมขั้นต่ำของ Ethernet (64 ไบต์) อีกด้วย</p>
+                    <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Wk2-MAC for LAN.pdf</em>, หน้า 33; <em>Computer Networking: A Top-Down Approach, 7th Edition</em>, Section 6.4.2.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 7 -->
+            <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 7) การคำนวณ Subnetting</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold mb-2">7.1 จำนวน Host IP Address ที่ใช้งานได้</h3>
+                    <p>Address block ที่ได้รับคือ <code>206.7.128.0/25</code></p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li>Prefix length = 25 บิต, จำนวนบิตสำหรับ Host = 32 - 25 = 7 บิต</li>
+                        <li>จำนวน Address ทั้งหมด = 2⁷ = 128 Addresses</li>
+                        <li>จำนวน Host IP Address ที่ใช้งานได้ = 2⁷ - 2 = 128 - 2 = <strong>126 Addresses</strong> (หัก Network Address และ Broadcast Address)</li>
+                    </ul>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">7.2 การจัดสรร Subnet ที่เหมาะสม</h3>
+                    <p>เราจะใช้เทคนิค <strong>Variable Length Subnet Masking (VLSM)</strong> โดยเริ่มจัดสรรจากความต้องการขนาดใหญ่ที่สุดก่อน</p>
+                    <ol class="list-decimal list-inside mt-2 space-y-1">
+                        <li><strong>แผนกการเงิน (50 hosts):</strong> ต้องการ <code>2^h - 2 >= 50</code> -> <code>2^6 - 2 = 62</code> (พอ) -> ใช้ 6 บิตสำหรับ host -> Prefix ใหม่คือ <strong>/26</strong>. จัดสรร Subnet แรก: <strong>206.7.128.0/26</strong></li>
+                        <li><strong>แผนกอำนวยการ (32 hosts):</strong> ต้องการ <code>2^h - 2 >= 32</code> -> <code>2^6 - 2 = 62</code> (พอ) -> ใช้ 6 บิตสำหรับ host -> Prefix ใหม่คือ <strong>/26</strong>. จัดสรร Subnet ที่สอง: <strong>206.7.128.64/26</strong></li>
+                    </ol>
+                    <div class="overflow-x-auto mt-4">
+                        <table class="w-full border-collapse border border-gray-300">
+                             <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2 border"></th>
+                                    <th class="p-2 border">แผนกการเงิน</th>
+                                    <th class="p-2 border">แผนกอำนวยการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="p-2 border font-semibold">Network Address</td><td class="p-2 border"><code>206.7.128.0</code></td><td class="p-2 border"><code>206.7.128.64</code></td></tr>
+                                <tr><td class="p-2 border font-semibold">Subnet Mask</td><td class="p-2 border"><code>255.255.255.192</code> (/26)</td><td class="p-2 border"><code>255.255.255.192</code> (/26)</td></tr>
+                                <tr><td class="p-2 border font-semibold">First Host IP</td><td class="p-2 border"><code>206.7.128.1</code></td><td class="p-2 border"><code>206.7.128.65</code></td></tr>
+                                <tr><td class="p-2 border font-semibold">Last Host IP</td><td class="p-2 border"><code>206.7.128.62</code></td><td class="p-2 border"><code>206.7.128.126</code></td></tr>
+                                <tr><td class="p-2 border font-semibold">Broadcast Address</td><td class="p-2 border"><code>206.7.128.63</code></td><td class="p-2 border"><code>206.7.128.127</code></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">7.3 จำนวน IP Address ที่เหลือ</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li>Address Block เริ่มต้น (/25) มีทั้งหมด 128 Addresses</li>
+                        <li>แผนกการเงินใช้ไป 64 Addresses</li>
+                        <li>แผนกอำนวยการใช้ไป 64 Addresses</li>
+                        <li>จำนวน Address ที่ใช้ไปทั้งหมด = 64 + 64 = 128 Addresses</li>
+                        <li>จำนวน Address ที่เหลือ = 128 - 128 = 0 Addresses</li>
+                    </ul>
+                    <p class="mt-2">ดังนั้น <strong>ไม่เหลือ IP Address</strong> สำหรับรองรับ Host Computer ได้อีก (0 เครื่อง)</p>
+                    <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Wk3 IP Addressing.pdf</em>; <em>Lab1-solution.pptx</em>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 8) การวิเคราะห์ตารางเส้นทาง (Routing Table)</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold mb-2">8.1 การส่งข้อมูลไปยัง 192.168.15.227</h3>
+                    <p><strong>Exit Interface:</strong> <strong>Serial0/0/0</strong></p>
+                    <p><strong>เหตุผล:</strong> Router จะใช้หลักการ <strong>Longest Prefix Match</strong>. เนื่องจาก IP ปลายทาง <code>192.168.15.227</code> ไม่ตรงกับเส้นทางใดในตาราง Router จึงใช้ <strong>Default Route</strong> (<code>R* 0.0.0.0/0</code>) ซึ่งระบุให้ส่ง Packet ไปยัง Next-hop IP ที่ <code>209.165.200.226</code>. Router จะค้นหาทางไปยัง Next-hop IP นี้ และพบว่าอยู่ในเครือข่าย <code>209.165.200.224/30</code> ซึ่งเชื่อมต่อโดยตรงกับ Interface <strong>Serial0/0/0</strong>.</p>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">8.2 เครือข่ายที่ Router เชื่อมต่อโดยตรง</h3>
+                    <p>Router นี้เชื่อมต่อโดยตรง (Directly Connected) กับ 3 เครือข่าย (ดูจากรายการที่มีสัญลักษณ์ <code>C</code>):</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><code>192.168.10.0/24</code></li>
+                        <li><code>192.168.11.0/24</code></li>
+                        <li><code>209.165.200.224/30</code></li>
+                    </ul>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">8.3 Routing Protocol ที่ใช้งาน</h3>
+                    <p>ระบบเครือข่ายนี้ใช้ <strong>RIP (Routing Information Protocol)</strong></p>
+                    <p><strong>เหตุผล:</strong> Default Route มีสัญลักษณ์ <code>R</code> นำหน้า ซึ่งใน Cisco IOS หมายถึงเส้นทางที่เรียนรู้มาจากโปรโตคอล RIP นอกจากนี้ ค่า Administrative Distance ที่แสดงในวงเล็บ <code>[120/1]</code> คือ 120 ซึ่งเป็นค่า Default ของ RIP</p>
+                    <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Wk3 IP Addressing.pdf</em>, หน้า 38, 41; <em>Wk4 Packet Tracer LAB.pdf</em>, หน้า 16.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 9 -->
+            <div class="bg-white rounded-lg shadow-md">
+                <button class="accordion-button w-full text-left p-4 flex justify-between items-center bg-gray-200 hover:bg-gray-300 transition-colors rounded-t-lg">
+                    <h2 class="text-xl font-semibold">ข้อ 9) ความเข้าใจเรื่อง Transport Layer</h2>
+                    <svg class="accordion-icon w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content p-6 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold mb-2">9.1 ประสิทธิภาพเมื่อ Loss Rate สูง (RTO > RTT)</h3>
+                    <p><strong>ประสิทธิภาพจะต่ำมาก (Very low performance)</strong></p>
+                    <p><strong>เหตุผล:</strong> เมื่อ Loss Rate สูง Packet จะสูญหายบ่อยครั้ง และจำเป็นต้องมีการส่งซ้ำ (Retransmission) ในแต่ละครั้งที่ Packet สูญหาย Sender จะต้องรอจนกว่าค่า <strong>Retransmission Timeout (RTO)</strong> จะหมดเวลา (50 ms) ถึงจะส่ง Packet นั้นซ้ำ การต้องรอเป็นเวลา 50 ms บ่อยๆ จะทำให้เกิดช่วงเวลาที่ไม่มีการส่งข้อมูลใหม่ๆ ส่งผลให้ <strong>Throughput</strong> ลดลงอย่างมาก</p>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">9.2 ประสิทธิภาพเมื่อ Loss Rate เป็นศูนย์</h3>
+                    <p><strong>ประสิทธิภาพจะสูงมาก (Very high performance)</strong></p>
+                    <p><strong>เหตุผล:</strong> เมื่อ Loss Rate เป็น 0% หมายความว่าไม่มี Packet สูญหายเลย Sender จะได้รับ Acknowledgment (ACK) กลับมาในเวลาประมาณ RTT (1 ms) ซึ่งเร็วกว่าค่า RTO (50 ms) มาก ดังนั้น Sender จะไม่จำเป็นต้องรอให้ RTO หมดเวลาเลย และสามารถส่งข้อมูลใหม่ๆ ได้อย่างต่อเนื่องทันทีที่ได้รับ ACK</p>
+                    <hr class="my-4">
+                    <h3 class="text-lg font-semibold mb-2">9.3 จะเกิดอะไรขึ้นเมื่อ RTO < RTT</h3>
+                    <p>จะเกิด <strong>การหมดเวลาที่ไม่จำเป็น (Premature Timeout)</strong> และ <strong>การส่งข้อมูลซ้ำซ้อนจำนวนมาก (Unnecessary Retransmissions)</strong></p>
+                    <p><strong>เหตุผล:</strong> ค่า RTO (2 ms) ถูกตั้งไว้ <strong>สั้นกว่า</strong> ค่า RTT จริง (20 ms) อย่างมีนัยสำคัญ เมื่อ Sender ส่ง Packet ออกไป Timer ของมันจะหมดเวลาลงใน 2 ms และทำการส่ง Packet นั้นซ้ำ ในขณะที่ ACK ของ Packet เดิมยังเดินทางกลับมาไม่ถึง เหตุการณ์นี้จะเกิดขึ้นกับทุก Packet ที่ถูกส่ง ทำให้เกิด Packet ซ้ำซ้อนจำนวนมหาศาลในเครือข่าย เป็นการสิ้นเปลือง Bandwidth และทำให้ประสิทธิภาพโดยรวมต่ำมาก</p>
+                    <div class="source-ref">
+                        <p><strong>แหล่งอ้างอิง:</strong> <em>Computer Networking: A Top-Down Approach, 7th Edition</em>, Section 3.5.3, 3.7.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    button.classList.toggle('active');
+
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
