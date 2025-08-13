@@ -28,11 +28,29 @@
             font-style: italic;
             color: #4b5563;
         }
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .accordion-content {
+                max-height: none !important;
+            }
+            .accordion-button .accordion-icon {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl relative">
+        <button onclick="window.print()" class="no-print absolute top-4 right-4 md:top-8 md:right-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg flex items-center transition-all shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd" />
+            </svg>
+            พิมพ์
+        </button>
+
         <header class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900">เฉลยตัวอย่างข้อสอบกลางภาค</h1>
             <p class="text-lg text-gray-600 mt-2">วิชา: 070315104 Digital Network Technology</p>
@@ -56,7 +74,7 @@
                     <hr class="my-4">
                     <h3 class="text-lg font-semibold mb-2">1.2 การวิเคราะห์ประสิทธิภาพของเทคนิคโมดูเลชัน</h3>
                     <div class="my-4 text-center">
-                        <img src="https://storage.googleapis.com/gemini-prod/images/3d749508-3d84-4841-862d-a192e212f718" alt="กราฟแสดง Bit Error Rate ของเทคนิคโมดูเลชันต่างๆ" class="mx-auto rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Chart+Not+Available';">
+                        <img src="https://lh5.googleusercontent.com/d/1w0dKVxtzjzQyD1HJh6g9ksLKgTL6uNrb" alt="กราฟแสดง Bit Error Rate ของเทคนิคโมดูเลชันต่างๆ" class="mx-auto rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Chart+Not+Available';">
                     </div>
                     <p><strong>1.2.1 โมดูเลชันที่เกิดความผิดพลาดน้อยที่สุด:</strong></p>
                     <p><strong>BPSK, QPSK, และ 4-QAM</strong> เกิดความผิดพลาดน้อยที่สุด เนื่องจากเส้นกราฟของเทคนิคเหล่านี้อยู่ต่ำที่สุด ซึ่งหมายความว่าที่ระดับ Eb/N0 เท่ากัน จะมีโอกาสเกิดข้อผิดพลาดของบิต (BER) น้อยที่สุด</p>
@@ -91,7 +109,7 @@
                 </button>
                 <div class="accordion-content p-6 border-t border-gray-200">
                     <div class="my-4 text-center">
-                         <img src="https://storage.googleapis.com/gemini-prod/images/4214fe96-c67d-419b-b054-d84869818818" alt="ไดอะแกรมเครือข่ายสำหรับคำถามข้อ 2" class="mx-auto rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x150/E2E8F0/4A5568?text=Network+Diagram';">
+                         <img src="https://lh5.googleusercontent.com/d/1Yxu-UadAXszW_vNQpUdNCUTVSFwn-WS_" alt="ไดอะแกรมเครือข่ายสำหรับคำถามข้อ 2" class="mx-auto rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x150/E2E8F0/4A5568?text=Network+Diagram';">
                     </div>
                     <h3 class="text-lg font-semibold mb-2">2.1 ARP Table ของแต่ละ Host</h3>
                     <p><strong>Host A (10.0.0.11/24):</strong> อยู่ในเครือข่าย 10.0.0.0/24 จะส่ง ARP request โดยตรงหา Host B (subnet เดียวกัน) และส่งไปที่ Gateway (10.0.0.99) เพื่อไปหา Host D (คนละ subnet)</p>
